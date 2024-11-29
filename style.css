@@ -1,0 +1,115 @@
+.racer-table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.racer-table td {
+  height: 40px;
+  width: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0;
+  position: relative;
+}
+
+.finish-line {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.racer-table td.active {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#player1-race td.active {
+  background-image: url("images/player_1.png");
+}
+
+#player2-race td.active {
+  background-image: url("images/player_2.png");
+}
+
+.header {
+  position: relative;
+  background-image: url('/images/city-lights.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(168, 72, 72); /* Ensure the text is visible on the banner */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.car-placeholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.car-image {
+  width: 30px;
+  height: auto;
+  display: none;
+}
+
+.car-image.finish {
+  width: 80px;
+  height: auto;
+  display: block;
+}
+
+#winner-announcement {
+  font-size: 2em; /* Make the text larger */
+  font-weight: bold; /* Make the text bold */
+  color: gold; /* Use a gold color for the text */
+  text-align: center; /* Center the text */
+  margin-top: 20px; /* Add some margin at the top */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow for better readability */
+  animation: winner-animation 1s infinite alternate; /* Add an animation */
+}
+
+@keyframes winner-animation {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+#restart-button {
+  margin-top: 20px; /* Add some margin at the top */
+}
+
+.custom-restart-button {
+  background-color: #ff5733; /* Custom background color */
+  border: none; /* Remove border */
+  color: white; /* Text color */
+  padding: 15px 30px; /* Padding */
+  font-size: 1.5em; /* Font size */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+}
+
+.custom-restart-button:hover {
+  background-color: #ff2e00; /* Darker background color on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
